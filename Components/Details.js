@@ -41,11 +41,13 @@ const Details = () => {
         <View style={styles.infoLeftWrapper}>
           <View style={styles.infoItemWrapper}>
             <Text style={styles.infoText}>
+              {item.category == 'Casas' ? <Text>Baños: </Text> : null}
               {item.info}
             </Text>
           </View>
           <View style={styles.infoItemWrapper}>
             <Text style={styles.infoText}>
+              {item.category == 'Casas' ? <Text>Piezas: </Text> : null}
               {item.more_info}
             </Text>
           </View>

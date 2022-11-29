@@ -6,6 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./Screens/Home";
 import Details from "./Components/Details";
+import CategoriesDetails from "./Components/CategoriesDetails";
 
 function HomeScreen() {
   return (
@@ -29,6 +30,11 @@ function App() {
         <Stack.Screen
           name="Details"
           component={Details}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Category"
+          component={CategoriesDetails}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

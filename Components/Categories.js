@@ -3,11 +3,15 @@ import React from "react";
 import { CategoriesData } from "../Constants/CategoriesData";
 import { Octicons } from "@expo/vector-icons";
 import { COLORS } from "../Constants/Colors";
+import { useNavigation } from "@react-navigation/native";
 
 const Categories = () => {
+
+  const navigation = useNavigation()
+
   const renderCategory = ({ item, index }) => {
     return (
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => navigation.navigate('Category', {item: item})}>
       <View key={index} style={[styles.itemWrapper, {marginLeft: item.id == 1 ? 23 : 0}]}>
         <Image style={styles.image} source={item.image} />
         <Text style={styles.itemTitle}>{item.title}</Text>
